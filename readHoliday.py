@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
 
-with open('feriadosNacionais.pkl', 'rb') as file:
-    model = pickle.load(file)
-st.write(model)
+df = pd.read_excel('feriadosNacionais.xlsx')
+st.table(df)
